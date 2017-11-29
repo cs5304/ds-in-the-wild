@@ -4,7 +4,7 @@ from jinja2 import Template
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--site-prefix', type=str, default='/ds-in-the-wild',
+parser.add_argument('--site-prefix', type=str, default='',
     help='Set prefix so that served correctly under Github Pages. Use "" when serving locally.')
 options = parser.parse_args()
 
