@@ -32,24 +32,140 @@
       <div class="row">
         <div class="col-12">
           <div class="header clearfix">
-            <!-- <nav>
+            <nav>
               <ul class="nav nav-pills float-right">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="https://classes.cornell.edu/browse/roster/SP18/class/CS/5304">Class Roster</a>
                 </li>
               </ul>
-            </nav> -->
-            <h3>Data Science in the Wild</h3>
+            </nav>
+            <h3><a href="/">CS 5304: Data Science in the Wild</a></h3>
           </div>
         </div>
       </div>
 
-      <div class="row">
+      <div class="row section">
         <div class="col-12">
-          <h4>Hello World</h4>
-          <p data-linkify="this">https://classes.cornell.edu/browse/roster/SP18/class/CS/5304</p>
+          <h4>Overview</h4>
+          <p>Massive amounts of data are collected by many companies and organizations and the task of a data scientist is to extract actionable knowledge from the data – for scientific needs, to improve public health, to promote businesses, for social studies and for various other purposes. This course will focus on the practical aspects of the field and will attempt to provide a comprehensive set of tools for extracting knowledge from data.</p>
+          <p>Meets: MW 4:45pm - 6:00pm</p>
         </div>
       </div>
+
+      <div class="row section">
+        <div class="col-12">
+          <h4>Syllabus</h4>
+          <table class="table table-sm borderless syllabus">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Date</th>
+                <th scope="col">Topic</th>
+                <th scope="col">Assignment</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in syllabus %}
+              <tr>
+                <th scope="row">{{loop.index}}</th>
+                <td>{{item.date}}</td>
+                <td>{{item.topic}}</td>
+                <td>{{item.assignment}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="row section">
+        <div class="col-12">
+          <h4>Grading Scheme</h4>
+          <table class="table table-sm borderless"><!-- Top Level Category -->
+            <thead>
+              <tr>
+                <th scope="col">Top Level Category</th>
+                <th scope="col">Grade Percentage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Assignments</td>
+                <td>60%</td>
+              </tr>
+              <tr>
+                <td>Project</td>
+                <td>40%</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-sm borderless"><!-- Assignments -->
+            <thead>
+              <tr>
+                <th scope="col">Assignments</th>
+                <th scope="col">Category Percentage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Assign 0</td>
+                <td>10%</td>
+              </tr>
+              <tr>
+                <td>Assign 1</td>
+                <td>15%</td>
+              </tr>
+              <tr>
+                <td>Assign 2</td>
+                <td>15%</td>
+              </tr>
+              <tr>
+                <td>Assign 3</td>
+                <td>15%</td>
+              </tr>
+              <tr>
+                <td>Assign 4</td>
+                <td>15%</td>
+              </tr>
+              <tr>
+                <td>Assign 5</td>
+                <td>15%</td>
+              </tr>
+              <tr>
+                <td>Assign 6</td>
+                <td>15%</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-sm borderless"><!-- Project -->
+            <thead>
+              <tr>
+                <th scope="col">Project</th>
+                <th scope="col">Category Percentage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Part 0</td>
+                <td>10%</td>
+              </tr>
+              <tr>
+                <td>Part 1</td>
+                <td>30%</td>
+              </tr>
+              <tr>
+                <td>Part 2</td>
+                <td>30%</td>
+              </tr>
+              <tr>
+                <td>Final Part</td>
+                <td>30%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
     </div>
 
     <!-- Bootstrap core JavaScript

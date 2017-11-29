@@ -1,5 +1,5 @@
 import argparse
-
+import pandas as pd
 from jinja2 import Template
 
 
@@ -12,6 +12,7 @@ options = parser.parse_args()
 settings = {
     'index_template': 'index.jinja2',
     'index_out': 'index.html',
+    'syllabus': 'syllabus.csv',
 }
 
 
@@ -20,10 +21,35 @@ template_kwargs = {
 }
 
 
-with open(settings['index_template']) as f:
-    template = Template(f.read())
+def read_template():
+    with open(settings['index_template']) as f:
+        template = Template(f.read())
+    return template
 
 
-with open(settings['index_out'], 'w') as f:
-    site = template.render(**template_kwargs)
-    f.write(site)
+def write_template(template, **kwargs):
+    with open(settings['index_out'], 'w') as f:
+        site = template.render(**kwargs)
+        f.write(site)
+
+
+def read_syllabus():
+    syllabus = []
+    df = pd.read_csv(settings['syllabus'], dtype=dict(date=str, topic=str, assignment=str))
+    for row in df.iterrows():
+        syllabus.append(dict(
+            date=row[1].date,
+            topic=row[1].topic,
+            assignment=row[1].assignment,
+            ))
+    return syllabus
+
+
+def main():
+    template = read_template()
+    syllabus = read_syllabus()
+    template_kwargs['syllabus'] = syllabus
+    write_template(template, **template_kwargs)
+
+
+main()
