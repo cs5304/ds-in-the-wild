@@ -24,7 +24,12 @@ docker run -i -t --name cs5304 \
     /bin/bash
 ```
 
-***Programming*** For this assignment, all that is required is to run Docker as instructed above, then to run the notebook that we've provided, and print the output to a pdf (this can be done with File -> Print Preview).
+***Programming*** For this assignment, all that is required is to run Docker as instructed above, then to run the notebook that we've provided, and print the output to a pdf (this can be done with File -> Print Preview). To start the notebook, use the following command inside your running Docker container:
+
+```
+cd /code
+jupyter notebook --ip=0.0.0.0 --port=3003 --allow-root
+```
 
 ## FAQ
 
