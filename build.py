@@ -35,12 +35,16 @@ def write_template(template, **kwargs):
 
 def read_syllabus():
     syllabus = []
-    df = pd.read_csv(settings['syllabus'], dtype=dict(date=str, topic=str, assignment=str))
+    df = pd.read_csv(settings['syllabus'],
+        dtype=dict(date=str, topic=str, assignment=str, href=str),
+        keep_default_na=False)
     for row in df.iterrows():
+        href = options.site_prefix + row[1].href if row[1].href.startswith("/") else row[1].href
         syllabus.append(dict(
             date=row[1].date,
             topic=row[1].topic,
             assignment=row[1].assignment,
+            href=href,
             ))
     return syllabus
 

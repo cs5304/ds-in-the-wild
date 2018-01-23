@@ -129,7 +129,11 @@
               <tr>
                 <th scope="row">{{loop.index}}</th>
                 <td>{{item.date}}</td>
-                <td>{{item.topic}}</td>
+                {% if item.href %}
+                  <td><a href="{{item.href}}">{{item.topic}}</a></td>
+                {% else %}
+                  <td>{{item.topic}}</td>
+                {% endif %}
                 <td>{{item.assignment}}</td>
               </tr>
               {% endfor %}
@@ -190,9 +194,9 @@
         <div class="col-12">
           <h4>Summary of Assignments</h4>
           <dl>
-            <dt class="font-italic">Assign 0</dt>
+            <dt class="font-italic"><a href="{{site_prefix}}/assignments/assign0_setup.pdf">Assign 0</a></dt>
             <dd>
-              Hello world. Review of probability theory. Setup a programming environment.
+              Hello world. Setup a programming environment and simple programming exercises.
             </dd>
 
             <dt class="font-italic">Assign 1</dt>
