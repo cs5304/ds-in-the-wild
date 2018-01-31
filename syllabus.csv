@@ -1,7 +1,7 @@
 date,topic,assignment,href
 "Wed Jan 24, 2018","Introduction to Data Science","-","/lectures/lec1_IntroductionToDataScience.pdf"
 "Mon Jan 29, 2018","Data Modeling: Supervised Learning Methods","Assign 0 Due","/lectures/lec2_SupervisedLearning.pdf"
-"Wed Jan 31, 2018","Data Modeling: Unsupervised Learning Methods","-",""
+"Wed Jan 31, 2018","Data Modeling: Unsupervised Learning Methods","-","/lectures/lec3_UnsupervisedLearning.pdf"
 "Mon Feb 5, 2018","ETL, Feature Engineering, Bootstrapping, Sampling","Assign 1 Due",""
 "Wed Feb 7, 2018","Case Study: Scaling Machine Learning in Ad Tech","-",""
 "Mon Feb 12, 2018","Deep Learning","-",""
